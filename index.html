@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assistente de Builds</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <img src="./assets/logo.png" alt="Logo ESPORTS NLW">
+  </header>
+  <main>
+    <section>
+      <div id="mainbox">
+        <h2>Assistente de Builds</h2>
+        <p>Faça sua pergunta ao assistente de acordo com o jogo selecionado</p>
+        <form id="form">
+          <input id="apiKey" type="password" placeholder="Gemini API Key" required>
+            <select id="gameSelect">
+              <option value="">Select a game</option>
+              <option value="hades">Hades</option>
+              <option value="deadcells">Dead Cells</option>
+              <option value="balatro">Balatro</option>
+            </select>
+          <input id="promptInput" type="text" placeholder="Describe your build...">
+          <button id="askButton">Montar Build</button>
+        </form>
+        <div id="aiOutput" class="hidden">
+          <div class="response-content">
+          </div>
+        </div>
+      </div>
+    </section>
+    <button></button>
+  </main>
+  <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

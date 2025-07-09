@@ -1,0 +1,145 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, sans-serif;
+  line-height: 160%;
+}
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
+}
+
+body {
+  background-image: url("./assets/bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position:top center;
+  background-color: #060204;
+  color:whitesmoke;
+}
+
+header{
+  text-align: center;
+  padding-top: 2rem;
+}
+
+header img{
+  width: 15rem;
+}
+
+main{
+  max-width: 36rem;
+  width: 90%;
+  margin: 3rem auto;
+}
+
+section {
+  background-image: linear-gradient(90deg, #ca4487, #c5782f , #d13232);
+  border-radius: 0.7rem;
+  padding-top: 4px;
+  opacity: 0;
+  transform: translateY(2rem);
+  animation-name: appear;
+  animation-duration: 700ms;
+  animation-fill-mode: forwards;
+}
+
+#mainbox {
+  padding: 2rem;
+  padding-top: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #272424;
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+input, select {
+  all: unset;
+  padding: 0.5rem;
+  border: 2px solid;
+  border-radius: 5px;
+  border-color: #d83232;
+  font-size: 14px;
+  background-color: #00000036;
+}
+input{
+  flex: 1;
+}
+#askButton {
+  width: 100%;
+  border: 0;
+  background-image: linear-gradient(90deg, #ca4487, #c5782f , #d13232);
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bolder;
+  transition: all 200ms;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 1rem rgba(0,0,0,0.4);
+}
+
+button:disabled {
+  transition: initial;
+  transform: initial;
+  box-shadow: initial;
+  opacity: 0.8;
+  cursor: not-allowed;
+  color:black
+}
+
+.loading {
+  animation: pulse 0.8s infinite
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+option{
+  background-color: #272424;
+}
+
+#aiOutput{
+  background: rgba(0,0,0,0.4);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  border-left: 4px solid #c5782f;
+}
+
+#aiOutput ul {
+  padding-left: 1.5rem;
+}
+
+#aiOutput ol {
+  padding-left: 1.5rem;
+}
+
+#aiOutput p {
+  color: whitesmoke;
+  padding-left: 1.5rem;
+}
+
+.hidden{
+  display: none;
+}
